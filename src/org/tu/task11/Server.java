@@ -36,7 +36,7 @@ public class Server implements AutoCloseable {
         this.setIsRunning(false);
     }
 
-    public void startServer(final Consumer<Socket> clientHandler) throws IOException {
+    public void start(final Consumer<Socket> clientHandler) throws IOException {
         this.setIsRunning(true);
 
         while(this.getIsRunning()){
@@ -46,7 +46,7 @@ public class Server implements AutoCloseable {
         }
     }
 
-    public void stopServer() {
+    public void stop() {
         this.setIsRunning(false);
     }
 

@@ -3,7 +3,7 @@ package org.tu.task11;
 import java.io.IOException;
 
 public class ClientMain {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         final String server = "127.0.0.1";
         final int port = 90;
         try {

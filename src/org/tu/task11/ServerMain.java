@@ -4,12 +4,12 @@ import java.io.*;
 import java.time.Year;
 
 public class ServerMain {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         final int port = 90;
         final int poolSize = Runtime.getRuntime().availableProcessors() + 1; // optimal
         try {
             try (Server server = new Server(90, poolSize)) {
-                server.startServer(socket -> {
+                server.start(socket -> {
                     try {
                         InputStream is = socket.getInputStream();
                         ObjectInputStream ois = new ObjectInputStream(is);
